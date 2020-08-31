@@ -1,7 +1,10 @@
 const express = require('express');
 
 //importing shortid npm package to generate rando ids
-const shortid = require('shortid')
+const shortid = require('shortid');
+
+//importing cors module
+const cors = require('cors');
 
 /* 
 Ex. 
@@ -15,6 +18,7 @@ users.insert({
 const server = express();
 
 server.use(express.json());
+server.use(cors());
 
 /** USERS DATA OBJ**/
 let users = [
